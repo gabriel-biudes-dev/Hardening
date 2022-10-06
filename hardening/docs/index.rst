@@ -7,6 +7,8 @@ Welcome to zzz's documentation!
     :members:
 .. automodule:: folderstore
     :members:
+.. automodule:: slackspace
+    :members:
 
 .. toctree::
    :maxdepth: 2

@@ -53,6 +53,12 @@
 <li><a class="reference internal" href="#folderstore.removeLine"><code class="docutils literal notranslate"><span class="pre">removeLine()</span></code></a></li>
 <li><a class="reference internal" href="#folderstore.saveFolder"><code class="docutils literal notranslate"><span class="pre">saveFolder()</span></code></a></li>
 <li><a class="reference internal" href="#folderstore.showMenu"><code class="docutils literal notranslate"><span class="pre">showMenu()</span></code></a></li>
+<li><a class="reference internal" href="#slackspace.clearSlack"><code class="docutils literal notranslate"><span class="pre">clearSlack()</span></code></a></li>
+<li><a class="reference internal" href="#slackspace.getClusters"><code class="docutils literal notranslate"><span class="pre">getClusters()</span></code></a></li>
+<li><a class="reference internal" href="#slackspace.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li><a class="reference internal" href="#slackspace.showData"><code class="docutils literal notranslate"><span class="pre">showData()</span></code></a></li>
+<li><a class="reference internal" href="#slackspace.showMenu"><code class="docutils literal notranslate"><span class="pre">showMenu()</span></code></a></li>
+<li><a class="reference internal" href="#slackspace.writeData"><code class="docutils literal notranslate"><span class="pre">writeData()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
@@ -239,6 +245,86 @@
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-slackspace"></span><dl class="py function">
+<dt class="sig sig-object py" id="slackspace.clearSlack">
+<span class="sig-prename descclassname"><span class="pre">slackspace.</span></span><span class="sig-name descname"><span class="pre">clearSlack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filesize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#slackspace.clearSlack" title="Permalink to this definition"></a></dt>
+<dd><p>Clear file slack space</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clusters</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – List of cluster numbers</p></li>
+<li><p><strong>filesize</strong> (<em>int</em>) – File size in bytes</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="slackspace.getClusters">
+<span class="sig-prename descclassname"><span class="pre">slackspace.</span></span><span class="sig-name descname"><span class="pre">getClusters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#slackspace.getClusters" title="Permalink to this definition"></a></dt>
+<dd><p>Get clusters from the debugfs command result</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – Debugfs result</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of cluster numbers</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="slackspace.main">
+<span class="sig-prename descclassname"><span class="pre">slackspace.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#slackspace.main" title="Permalink to this definition"></a></dt>
+<dd><p>Main function of Slack Space application</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="slackspace.showData">
+<span class="sig-prename descclassname"><span class="pre">slackspace.</span></span><span class="sig-name descname"><span class="pre">showData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filesize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#slackspace.showData" title="Permalink to this definition"></a></dt>
+<dd><p>Show clusters data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clusters</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – List of cluster numbers</p></li>
+<li><p><strong>filesize</strong> (<em>int</em>) – File size in bytes</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="slackspace.showMenu">
+<span class="sig-prename descclassname"><span class="pre">slackspace.</span></span><span class="sig-name descname"><span class="pre">showMenu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#slackspace.showMenu" title="Permalink to this definition"></a></dt>
+<dd><p>Show Slack Space application menu</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Choosen option</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="slackspace.writeData">
+<span class="sig-prename descclassname"><span class="pre">slackspace.</span></span><span class="sig-name descname"><span class="pre">writeData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filesize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#slackspace.writeData" title="Permalink to this definition"></a></dt>
+<dd><p>Write data in slack space</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> (<em>str</em>) – Message to be written</p></li>
+<li><p><strong>clusters</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – List of cluster numbers</p></li>
+<li><p><strong>filesize</strong> (<em>int</em>) – File size in bytes</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
